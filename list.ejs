@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vaccine Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  </head>
+  <style media="screen">
+    body{
+      background-color: #FFC947;
+      color: #362222;
+      font-family: 'STIX Two Math', serif;
+    }
+    .vaccinerstatus{
+      text-align: center;
+    }
+    .date-districtheading{
+      text-align: center;
+    }
+    table{
+      border-radius: 30px;
+      margin-left: 3vw;
+      margin-right: 3vw;
+      padding-left: 2vw;
+      border-radius: 9px;
+background: #FFC947;border-radius: 25px;
+background: #FFC947;
+box-shadow:  5px 5px 4px #f2bf43,
+             -5px -5px 4px #ffd34b;
+    font-family: 'Uchen', serif;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    }
+    td:nth-child(1){
+      text-align: left;
+      width: 38%;
+      font-size:1rem;
+      text-transform: capitalize;
+    }
+    .lap-tableheading{
+      font-size: 1.1rem;
+    }
+    .adressmain{
+      font-size: 1.05rem;
+    }
+  </style>
+  <body>
+    <h1 class="vaccinerstatus">Vaccine Status</h1>
+    <h4 class="date-districtheading">Date: <%=dateprovided %><br />District: <%=districtinej[0] %></h4>
+    <table>
+      <tr style="box-shadow: 1px solid black;">
+        <td><h4 class="lap-tableheading">Address</h4></td>
+        <td><h4 class="lap-tableheading">Fee Type</h4></td>
+        <td><h4 class="lap-tableheading">Vaccine</h4></td>
+        <td><h4 class="lap-tableheading">Dose 1</h4></td>
+        <td><h4 class="lap-tableheading">Dose 2</h4></td>
+        <td><h4 class="lap-tableheading">Age Limit</h4></td>
+      </tr>
+      <%for(var i=0;i<totalnumberofcenters;i++){ %>
+        <tr>
+          <td><p class="lap-adress"><span class="adressmain"><%=nameinej[i]%></span> <br />
+          <%=addressinej[i]%>, <%=districtinej[i]%>, <%=stateinej[i]%> (<%=pininej[i]%>)
+        </p>
+        </td>
+        <td><%=feetypeinej[i]%></td>
+        <td><%=vaccinenameinej[i]%></td>
+        <td><%=dose1inej[i]%></td>
+        <td><%=dose2inej[i]%></td>
+        <td><%=minageinej[i]%>+</td>
+
+        </tr>
+
+
+      <% } %>
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h4>District: <%=districtinej[0] %></h4> -->
+    <!-- <table>
+      <tr>
+        <td>Name</td>
+        <td>Address</td>
+        <td>District</td>
+        <td>State</td>
+        <td>Pincode</td>
+        <td>Fee type</td>
+
+      </tr>
+
+        <!-- <td><%= totalnumberofcenters %></td> -->
+        <!-- <% for(var i=0;i<totalnumberofcenters;i++){ %>
+          <tr>
+          <td> <%= nameinej[i] %> </td>
+          <td> <%= addressinej[i] %> </td>
+          <td> <%= districtinej[i] %> </td>
+          <td> <%= stateinej[i] %> </td>
+          <td> <%= pininej[i] %> </td>
+          <td> <%= feetypeinej[i] %> </td>
+        </tr>
+      <%} %>
+    </table> -->
+  </body>
+</html>
